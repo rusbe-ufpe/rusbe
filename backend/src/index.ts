@@ -1,11 +1,11 @@
 import express from 'express'
 import bodyParser from 'body-parser'
-const avaliacao = require('./routes/avaliacao') 
-const cardapio = require('./routes/cardapio')
-const fila = require('./routes/fila')
-const forum = require('./routes/forum')
-const grupos = require('./routes/grupos')
-const sugestoes = require('./routes/sugestoes')
+import avaliacao from './routes/avaliacao'
+import cardapio from './routes/cardapio'
+import fila from './routes/fila'
+import forum from './routes/forum'
+import grupos from './routes/grupos'
+import sugestoes from './routes/sugestoes'
 
 const app = express()
 app.use(express.json())
