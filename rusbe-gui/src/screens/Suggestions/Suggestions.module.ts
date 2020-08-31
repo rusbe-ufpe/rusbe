@@ -2,18 +2,17 @@ import { IonicModule } from '@ionic/angular';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-import { Complains } from './Complains.component';
+import { Suggestions } from './Suggestions.component';
 
-
-import { ComplainsRoutingModule } from './Complains-routing.module';
+import { SuggestionsRoutingModule } from './Suggestions-routing.module';
 
 @NgModule({
   imports: [
     IonicModule,
     CommonModule,
     FormsModule,
-    ComplainsRoutingModule
+    SuggestionsRoutingModule
   ],
-  declarations: [Complains]
+  declarations: [Suggestions]
 })
-export class ComplainsPageModule {}
+export class SuggestionsPageModule {}
