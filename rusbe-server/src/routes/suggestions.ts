@@ -2,7 +2,7 @@ import Router from 'express'
 
 const sugestoesRoutes = Router()
 
-sugestoesRoutes.get('/sugestoes',async(req,res)=>{
+sugestoesRoutes.get('/suggestions',async(req,res)=>{
     res.send({msg:"Olá"})
 })
 

@@ -2,7 +2,7 @@ import Router from 'express'
 
 const gruposRoutes = Router()
 
-gruposRoutes.get('/grupos',async(req,res)=>{
+gruposRoutes.get('/groups',async(req,res)=>{
     res.send({msg:"Olá"})
 })
 

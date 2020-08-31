@@ -2,7 +2,7 @@ import Router from 'express'
 
 const avaliacaoRoutes = Router()
 
-avaliacaoRoutes.get('/avaliacao',async(req,res)=>{
+avaliacaoRoutes.get('/rating',async(req,res)=>{
     res.send({msg:"Olá"})
 })
 

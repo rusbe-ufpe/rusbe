@@ -2,7 +2,7 @@ import Router from 'express'
 
 const cardapioRoutes = Router()
 
-cardapioRoutes.get('/cardapio',async(req,res)=>{
+cardapioRoutes.get('/menu',async(req,res)=>{
     res.send({msg:"Olá"})
 })
 

@@ -1,11 +1,11 @@
 import express from 'express'
 import bodyParser from 'body-parser'
-import avaliacao from './routes/avaliacao'
-import cardapio from './routes/cardapio'
-import fila from './routes/fila'
+import avaliacao from './routes/rating'
+import cardapio from './routes/menu'
+import fila from './routes/queue'
 import forum from './routes/forum'
-import grupos from './routes/grupos'
-import sugestoes from './routes/sugestoes'
+import grupos from './routes/groups'
+import sugestoes from './routes/suggestions'
 
 const app = express()
 app.use(express.json())
