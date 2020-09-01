@@ -1,9 +1,9 @@
 import Router from 'express'
 
-const sugestoesRoutes = Router()
+const suggestionsRoutes = Router()
 
-sugestoesRoutes.get('/suggestions',async(req,res)=>{
+suggestionsRoutes.get('/suggestions',async(req,res)=>{
     res.send({msg:"Olá"})
 })
 
-export default  sugestoesRoutes
+export default  suggestionsRoutes
