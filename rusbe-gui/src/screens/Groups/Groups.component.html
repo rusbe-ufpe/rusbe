@@ -13,6 +13,12 @@
         <ion-title size="large">Grupos</ion-title>
       </ion-toolbar>
     </ion-header>
-
-  <p>Grupos Screen</p>
+    <ion-list>
+      <ion-item *ngFor="let g of groups">
+        <ion-avatar slot="start">G</ion-avatar>
+        <ion-label>
+          <h2>{{g.name}}</h2>
+        </ion-label>
+      </ion-item>
+    </ion-list>
   </ion-content>

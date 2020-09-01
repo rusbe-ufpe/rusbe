@@ -4,7 +4,7 @@ import ratingRoutes from './routes/rating'
 import menuRoutes from './routes/menu'
 import queueRoutes from './routes/queue'
 import forumRoutes from './routes/forum'
-import groupsRoutes from './routes/groups'
+import groupsRoutes from './routes/groups.route'
 import suggestionsRoutes from './routes/suggestions'
 
 const app = express()

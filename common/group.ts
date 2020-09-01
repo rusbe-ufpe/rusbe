@@ -1,25 +1,28 @@
 import {User} from './user'
 import {Message} from './message'
+import uuid from 'uuid'
 
 export class Group{
     name: string
     id: string
-    members: Array<User>
+    membersIds: Array<string>
     msgs: Array<Message>
 
     constructor(name:string){
         this.name = name
         this.id = this.generateID()
-        this.members=[]
+        this.membersIds=[]
     }
     generateID(): string{
-        return 'metodoGerarId()'
+        const id: string = uuid.v4()
+        console.log('GRUPO '+id) 
+        return id
     }
     deleteGroup():void{
 
     }
-    addNewMember(newMember: User):void{
-
+    addNewMember(newMemberId: string):void{
+        this.membersIds.push(newMemberId)
     }
     deleteMember(memberId: string):void{
 
