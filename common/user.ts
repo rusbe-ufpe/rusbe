@@ -1,4 +1,4 @@
-import uuid from 'uuid'
+import {v4 as uuidv4} from 'uuid'
 
 export class User{
     name: string
@@ -11,7 +11,7 @@ export class User{
         this.groupsIds=[]
     }
     generateID(): string{
-        const id: string = uuid.v4()
+        const id: string = uuidv4()
         console.log(id)
         return id
     }

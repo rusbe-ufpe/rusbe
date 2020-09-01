@@ -15,7 +15,9 @@
     </ion-header>
     <ion-list>
       <ion-item *ngFor="let g of groups">
-        <ion-avatar slot="start">G</ion-avatar>
+        <ion-avatar slot="start">
+          <img src = "../../assets/groupAvatar.png">
+        </ion-avatar>
         <ion-label>
           <h2>{{g.name}}</h2>
         </ion-label>

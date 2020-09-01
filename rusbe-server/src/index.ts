@@ -6,8 +6,10 @@ import queueRoutes from './routes/queue'
 import forumRoutes from './routes/forum'
 import groupsRoutes from './routes/groups.route'
 import suggestionsRoutes from './routes/suggestions'
+import cors from 'cors'
 
 const app = express()
+app.use(cors())
 app.use(express.json())
 app.use(bodyParser.json())
 
