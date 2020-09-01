@@ -1,9 +1,9 @@
 import Router from 'express'
 
-const filaRoutes = Router()
+const queueRoutes = Router()
 
-filaRoutes.get('/queue',async(req,res)=>{
+queueRoutes.get('/queue',async(req,res)=>{
     res.send({msg:"Olá"})
 })
 
-export default  filaRoutes
+export default  queueRoutes

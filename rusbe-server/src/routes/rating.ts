@@ -1,9 +1,9 @@
 import Router from 'express'
 
-const avaliacaoRoutes = Router()
+const ratingRoutes = Router()
 
-avaliacaoRoutes.get('/rating',async(req,res)=>{
+ratingRoutes.get('/rating',async(req,res)=>{
     res.send({msg:"Olá"})
 })
 
-export default avaliacaoRoutes
+export default ratingRoutes

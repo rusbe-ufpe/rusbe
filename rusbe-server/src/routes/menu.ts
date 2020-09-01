@@ -1,9 +1,9 @@
 import Router from 'express'
 
-const cardapioRoutes = Router()
+const menuRoutes = Router()
 
-cardapioRoutes.get('/menu',async(req,res)=>{
+menuRoutes.get('/menu',async(req,res)=>{
     res.send({msg:"Olá"})
 })
 
-export default  cardapioRoutes
+export default menuRoutes

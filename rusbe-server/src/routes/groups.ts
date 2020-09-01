@@ -1,9 +1,9 @@
 import Router from 'express'
 
-const gruposRoutes = Router()
+const groupsRoutes = Router()
 
-gruposRoutes.get('/groups',async(req,res)=>{
+groupsRoutes.get('/groups',async(req,res)=>{
     res.send({msg:"Olá"})
 })
 
-export default  gruposRoutes
+export default groupsRoutes
