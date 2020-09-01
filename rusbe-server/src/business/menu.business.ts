@@ -1,5 +1,3 @@
-
-
 import { MenuApi } from './menu.api';
 
 export class BusinessMenu{
