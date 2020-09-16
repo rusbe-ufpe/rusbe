@@ -1,10 +1,11 @@
 import Router from 'express'
 import { BusinessMenu } from '../business/menu.business';
 
-const menuRoutes = Router()
+const menuRoutes = Router();
+const base_route = '/menu/';
 var menu: BusinessMenu = new BusinessMenu();
 
-menuRoutes.get('/menu',async(req,res)=>{
+menuRoutes.get(base_route+'dailymenu',async(req,res)=>{
     res.send({msg:menu.getTodayCardapio()});
 })
 

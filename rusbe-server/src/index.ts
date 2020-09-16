@@ -7,7 +7,14 @@ import forumRoutes from './routes/forum'
 import groupsRoutes from './routes/groups'
 import suggestionsRoutes from './routes/suggestions'
 
+const cors = require("cors");
+
+var corsOptions = {
+    origin: "http://localhost:4200"
+};
+
 const app = express()
+app.use(cors(corsOptions));
 app.use(express.json())
 app.use(bodyParser.json())
 

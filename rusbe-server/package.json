@@ -23,6 +23,7 @@
   "homepage": "https://github.com/Heitor-Santos/rusbe#readme",
   "dependencies": {
     "@types/express": "^4.17.7",
+    "cors": "^2.8.5",
     "express": "^4.17.1",
     "tslint": "^6.1.2",
     "typescript": "^3.9.7"
