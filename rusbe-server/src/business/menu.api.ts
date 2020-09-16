@@ -64,11 +64,71 @@ export class MenuApi{
         return JSON.stringify(menu);
     }
 
+    getLunch() : string{
+        var menu = {
+            protein : [],
+            carbs : [],
+            desert : [],
+            drink : []
+        };
+
+        var sz = 0;
+        const hash = parseInt(this.todayHash.toString());
+        const indexes = [hash, hash+1, hash+2];
+        
+        
+        sz = this.lunchProteinOptions.length;
+        menu.protein.push(this.lunchProteinOptions[indexes[0]%sz]);
+
+        sz = this.lunchCarbsOptions.length;
+        menu.carbs.push(this.lunchCarbsOptions[indexes[0]%sz]);
+        menu.carbs.push(this.lunchCarbsOptions[indexes[1]%sz]);
+        menu.carbs.push(this.lunchCarbsOptions[indexes[2]%sz]);
+
+        sz = this.lunchDesertOptions.length;
+        menu.desert.push(this.lunchDesertOptions[indexes[0]%sz]);
+
+        sz = this.lunchDrinkOptions.length;
+        menu.drink.push(this.lunchDrinkOptions[indexes[0]%sz]);
+        
+        return JSON.stringify(menu);
+    }
+
+    getDinner() : string{
+        var menu = {
+            protein : [],
+            carbs : [],
+            desert : [],
+            drink : []
+        };
+
+        var sz = 0;
+        const hash = parseInt(this.todayHash.toString());
+        const indexes = [hash, hash+1, hash+2];
+        
+        
+        sz = this.dinnerProteinOptions.length;
+        menu.protein.push(this.dinnerProteinOptions[indexes[0]%sz]);
+
+        sz = this.dinnerCarbsOptions.length;
+        menu.carbs.push(this.dinnerCarbsOptions[indexes[0]%sz]);
+        menu.carbs.push(this.dinnerCarbsOptions[indexes[1]%sz]);
+        menu.carbs.push(this.dinnerCarbsOptions[indexes[2]%sz]);
+
+        sz = this.dinnerDesertOptions.length;
+        menu.desert.push(this.dinnerDesertOptions[indexes[0]%sz]);
+
+        sz = this.dinnerDrinkOptions.length;
+        menu.drink.push(this.dinnerDrinkOptions[indexes[0]%sz]);
+        
+        return JSON.stringify(menu);
+    }
+
     get() : String{
         var menu = {
             breakfast : this.getBreakFast() || "",
-            lunch : "",
-            dinner : ""
+            lunch : this.getLunch() || "",
+            dinner : this.getDinner() || ""
         }
 
         return JSON.stringify(menu);
