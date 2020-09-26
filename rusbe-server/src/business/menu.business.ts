@@ -3,7 +3,7 @@ import { MenuApi } from './menu.api';
 export class BusinessMenu{
     api: MenuApi = new MenuApi();
 
-    getTodayCardapio(): String {
+    getTodayCardapio(): Object {
         return this.api.get();
     }
 }

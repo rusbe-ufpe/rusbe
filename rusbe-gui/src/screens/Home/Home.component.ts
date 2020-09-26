@@ -12,7 +12,7 @@ export class Home implements OnInit{
     @ViewChild(RouterOutlet) outlet: RouterOutlet;
 
     dailyMenu: any;
-
+    initialOption = 0;
     constructor(private router: Router, private menuService: MenuService) { }
 
     ngOnInit(): void {
@@ -22,11 +22,16 @@ export class Home implements OnInit{
         });
         this.menuService.getDailyMenu().subscribe(
             (data) => {
-                this.dailyMenu = data;
+                this.dailyMenu = JSON.parse(data).msg;
+                console.log(this.dailyMenu);
             },
             (err) => {
                 console.log(err.error);
             }
         );
+    }
+
+    nextOption(): void{
+        this.initialOption = (this.initialOption+1)%3;
     }
 }

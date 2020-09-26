@@ -16,6 +16,106 @@
 
   <p>Início Screen</p>
   <div class="menu-main-container">
-    {{dailyMenu}}
+    
+    <div class="menu-table" *ngIf="dailyMenu">
+
+      <button (click)="nextOption()" class="btn btn-success">Next</button>
+
+      <div class="menu-option-breakfast" *ngIf="initialOption==0">
+        <ion-grid>
+          <ion-row>
+            <h2>Café da manhã</h2>
+            <ion-col>
+              <h3>Carboidratos</h3>
+              <div *ngFor="let food of dailyMenu.breakfast.carbs">
+                <p>{{food}}</p>
+              </div>
+            </ion-col>
+            <ion-col>
+              <h3>Proteinas</h3>
+              <div *ngFor="let food of dailyMenu.breakfast.protein">
+                <p>{{food}}</p>
+              </div>
+            </ion-col>
+            <ion-col>
+              <h3>Sobremesa</h3>
+              <div *ngFor="let food of dailyMenu.breakfast.desert">
+                <p>{{food}}</p>
+              </div>
+            </ion-col>
+            <ion-col>
+              <h3>Bebida</h3>
+              <div *ngFor="let food of dailyMenu.breakfast.drink">
+                <p>{{food}}</p>
+              </div>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+      </div>
+     
+      <div class="menu-option-lunch" *ngIf="initialOption==1">
+        <ion-grid>
+          <ion-row>
+            <h2>Almoço</h2>
+            <ion-col>
+              <h3>Carboidratos</h3>
+              <div *ngFor="let food of dailyMenu.lunch.carbs">
+                <p>{{food}}</p>
+              </div>
+            </ion-col>
+            <ion-col>
+              <h3>Proteinas</h3>
+              <div *ngFor="let food of dailyMenu.lunch.protein">
+                <p>{{food}}</p>
+              </div>
+            </ion-col>
+            <ion-col>
+              <h3>Sobremesa</h3>
+              <div *ngFor="let food of dailyMenu.lunch.desert">
+                <p>{{food}}</p>
+              </div>
+            </ion-col>
+            <ion-col>
+              <h3>Bebida</h3>
+              <div *ngFor="let food of dailyMenu.lunch.drink">
+                <p>{{food}}</p>
+              </div>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+      </div>
+      
+      <div class="menu-option-lunch" *ngIf="initialOption==2">
+        <ion-grid>
+          <ion-row>
+            <h2>Jantar</h2>
+            <ion-col>
+              <h3>Carboidratos</h3>
+              <div *ngFor="let food of dailyMenu.dinner.carbs">
+                <p>{{food}}</p>
+              </div>
+            </ion-col>
+            <ion-col>
+              <h3>Proteinas</h3>
+              <div *ngFor="let food of dailyMenu.dinner.protein">
+                <p>{{food}}</p>
+              </div>
+            </ion-col>
+            <ion-col>
+              <h3>Sobremesa</h3>
+              <div *ngFor="let food of dailyMenu.dinner.desert">
+                <p>{{food}}</p>
+              </div>
+            </ion-col>
+            <ion-col>
+              <h3>Bebida</h3>
+              <div *ngFor="let food of dailyMenu.dinner.drink">
+                <p>{{food}}</p>
+              </div>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+      </div>
+    </div>
   </div>
   </ion-content>

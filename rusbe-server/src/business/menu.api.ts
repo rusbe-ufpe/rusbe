@@ -34,7 +34,7 @@ export class MenuApi{
         return dd*7 + mm*5 + yyyy*3;
     }
 
-    getBreakFast() : string{
+    getBreakFast() : Object{
         var menu = {
             protein : [],
             carbs : [],
@@ -61,10 +61,10 @@ export class MenuApi{
         sz = this.breakfastDrinkOptions.length;
         menu.drink.push(this.breakfastDrinkOptions[indexes[0]%sz]);
         
-        return JSON.stringify(menu);
+        return menu;
     }
 
-    getLunch() : string{
+    getLunch() : Object{
         var menu = {
             protein : [],
             carbs : [],
@@ -91,10 +91,10 @@ export class MenuApi{
         sz = this.lunchDrinkOptions.length;
         menu.drink.push(this.lunchDrinkOptions[indexes[0]%sz]);
         
-        return JSON.stringify(menu);
+        return menu;
     }
 
-    getDinner() : string{
+    getDinner() : Object{
         var menu = {
             protein : [],
             carbs : [],
@@ -121,16 +121,15 @@ export class MenuApi{
         sz = this.dinnerDrinkOptions.length;
         menu.drink.push(this.dinnerDrinkOptions[indexes[0]%sz]);
         
-        return JSON.stringify(menu);
+        return menu;
     }
 
-    get() : String{
+    get() : Object{
         var menu = {
             breakfast : this.getBreakFast() || "",
             lunch : this.getLunch() || "",
             dinner : this.getDinner() || ""
         }
-
-        return JSON.stringify(menu);
+        return menu;
     }
 }
