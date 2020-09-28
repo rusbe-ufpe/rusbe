@@ -20,8 +20,8 @@ const routes: Routes = [
         loadChildren: () => import('./Threads/Threads.module').then(m => m.ThreadsPageModule)
       },
       {
-        path: 'complains',
-        loadChildren: () => import('./Complains/Complains.module').then(m => m.ComplainsPageModule)
+        path: 'suggestions',
+        loadChildren: () => import('./Suggetions/Suggestions.module').then(m => m.SuggestionsPageModule)
       },
       {
         path: '',
