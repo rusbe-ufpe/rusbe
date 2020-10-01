@@ -8,6 +8,10 @@ const routes: Routes = [
     component: ScreensPage,
     children: [
       {
+        path: 'login',
+        loadChildren: () => import('./Login/Login.module').then(m => m.LoginPageModule)
+      },
+      {
         path: 'home',
         loadChildren: () => import('./Home/Home.module').then(m => m.HomePageModule)
       },
@@ -25,14 +29,14 @@ const routes: Routes = [
       },
       {
         path: '',
-        redirectTo: '/screens/home',
+        redirectTo: '/screens/login',
         pathMatch: 'full'
       }
     ]
   },
   {
     path: '',
-    redirectTo: '/screens/home',
+    redirectTo: '/screens/login',
     pathMatch: 'full'
   }
 ];
