@@ -4,4 +4,8 @@ export default class User{
     likes: any;
     voteRight: any;
     optionsVoted: string[];
+
+    getName():string{
+        return this.name;
+    }
 }

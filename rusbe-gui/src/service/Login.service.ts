@@ -1,9 +1,18 @@
-import { Injectable }    from '@angular/core';
+import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
-import { Observable } from 'rxjs';
+import { BehaviorSubject, Observable } from 'rxjs';
 
-@Injectable()
+const httpOptions = {
+  headers: new HttpHeaders({ 'Content-Type': 'application/json' })
+};
+
+@Injectable({
+  providedIn: 'root'
+})
 export class LoginService {
-  private headers = new HttpHeaders({'Content-Type': 'application/json'});
-  private apiURL = 'http://localhost:3000';
+  constructor(public http: HttpClient) { }
+  private pathUrl = 'http://localhost:3333/';
+  login(credentials): Observable<any>{
+    return this.http.get(this.pathUrl + 'login'+'?id='+credentials.id+'&'+'password='+credentials.password, httpOptions);
+  }
 }
