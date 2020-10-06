@@ -1,18 +1,28 @@
 <ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Threads
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
     <ion-toolbar>
-      <ion-title>
-        Threads
-      </ion-title>
+      <ion-title size="large">Threads</ion-title>
     </ion-toolbar>
   </ion-header>
+  <div class="container" *ngIf="renderPage; else loggedOut">
+    <p>Threads Screen</p>
+  </div>
 
-
-  <ion-content [fullscreen]="true">
-    <ion-header collapse="condense">
-      <ion-toolbar>
-        <ion-title size="large">Threads</ion-title>
-      </ion-toolbar>
-    </ion-header>
-
-  <p>Threads Screen</p>
-  </ion-content>
+  <ng-template #loggedOut>
+    <div class="container">
+      <header class="jumbotron">
+        <a href="/screens/login">
+          <p hre>Please login</p>
+        </a>
+      </header>
+    </div>
+  </ng-template>
+</ion-content>
